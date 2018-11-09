@@ -16,6 +16,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
+    <form action="nav" method="post">
     <nav class="navbar is-primary" id="top-navbar">
         <div class="container">
             <div class="navbar-brand">
@@ -23,16 +24,19 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="index.jsp" class="navbar-item home-item is-active">Home</a>
-                    <a href="artist.jsp" class="navbar-item artist-item">Artist</a>
-                    <a href="gallery.jsp" class="navbar-item gallery-item">Gallery</a>
-                    <a href="audition.jsp" class="navbar-item audition-item">Audition</a>
+                    <input name="home_nav" type="submit" class="button is-primary" value="Home" style="height: 100%"/>
+                    <input name="arts_nav" type="submit" class="button is-primary is-inverted" value="Artist" style="height: 100%" disabled/>
+                    <input name="gall_nav" type="submit" class="button is-primary" value="Gallery" style="height: 100%"/>
+                    <input name="audi_nav" type="submit" class="button is-primary" value="Audition" style="height: 100%"/>
                 </div>
             </div>
         </div>
     </nav>
+    </form>
     <div class="content">
-
+        <div class="container">
+            <h1 class="title">ARTIST PAGE</h1>
+        </div>
     </div>
 </body>
 </html>
