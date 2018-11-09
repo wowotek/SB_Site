@@ -45,6 +45,10 @@ public class NavigationController extends HttpServlet {
             request.getRequestDispatcher("gallery.jsp").forward(request, response);
         } else if (request.getParameter("audi_nav") != null){
             request.getRequestDispatcher("audition.jsp").forward(request, response);
+        } else if (request.getParameter("regs_nav") != null){
+            request.getRequestDispatcher("registration.jsp").forward(request, response);
+        } else if (request.getParameter("sign_nav") != null){
+            request.getRequestDispatcher("sign.jsp").forward(request, response);
         }
     }
 }

@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="rsc/bulma-wowo.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-front.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
@@ -72,13 +72,12 @@
                 </div>
             </div>
             <div class="box">
-                <form>
-                    <label class="label">Untuk masuk dalam audisi silagkan registrasi akun : </label>
-                    <input type="submit" class="button is-link is-inverted" value="Log In">
-                </form>
-                <form>
+                <form action="nav" method="post">
+                    <label class="label">Untuk masuk dalam audisi silahkan registrasi akun : </label>
+                    <input name="regs_nav" type="submit" class="button is-link" value="Register" style="height: 100%"/>
+                
                     <label class="label">Atau Jika sudah Memiliki Akun silahkan masuk : </label>
-                    <input type="submit" class="button is-link is-inverted" value="Log In">
+                    <input name="sign_nav" type="submit" class="button is-link" value="Sign-In" style="height: 100%"/>
                 </form>
             </div>
 
