@@ -1,4 +1,3 @@
-<!--
 <%-- 
     Document   : index
     Created on : Nov 8, 2018, 10:00:18 PM
@@ -6,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,17 +20,12 @@
         <div class="container">
             <div class="navbar-brand">
                 <input type="image" src="rsc/Logo-16x9.jpeg" style="height: 52px;">
-                <span class="navbar-burger burger" data-target="navMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="index.jsp" class="navbar-item home-item is-active">Home</a>
+                    <a href="index.jsp" class="navbar-item home-item">Home</a>
                     <a href="artist.jsp" class="navbar-item artist-item">Artist</a>
-                    <a href="gallery.jsp" class="navbar-item gallery-item">Gallery</a>
+                    <a href="gallery.jsp" class="navbar-item gallery-item is-active">Gallery</a>
                     <a href="audition.jsp" class="navbar-item audition-item">Audition</a>
                 </div>
             </div>
@@ -42,14 +35,4 @@
 
     </div>
 </body>
-    <script type="text/javascript">
-        (function () {
-            var burger = document.querySelector('.burger');
-            var nav = document.querySelector('#' + burger.dataset.target);
-            burger.addEventListener('click', function () {
-                burger.classList.toggle('is-active');
-                nav.classList.toggle('is-active');
-            });
-        })();
-    </script>
 </html>
