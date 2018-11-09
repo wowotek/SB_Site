@@ -30,10 +30,10 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="index.html" class="navbar-item home-iteme">Home</a>
-                    <a href="artist.html" class="navbar-item artist-item">Artist</a>
-                    <a href="gallery.html" class="navbar-item gallery-item">Gallery</a>
-                    <a href="audition.html" class="navbar-item audition-item is-active">Audition</a>
+                    <a href="index.jsp" class="navbar-item home-item">Home</a>
+                    <a href="artist.jsp" class="navbar-item artist-item">Artist</a>
+                    <a href="gallery.jsp" class="navbar-item gallery-item is-active">Gallery</a>
+                    <a href="audition.jsp" class="navbar-item audition-item">Audition</a>
                 </div>
             </div>
         </div>
