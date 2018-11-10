@@ -20,7 +20,9 @@
             <div class="box reg-box">
                 <form>
                     <center>
-                        <img src="rsc/Logo-1x1.jpeg" alt="SB Logo" style="height: 256px;"/> 
+                        <figure class="image">
+                            <img src="rsc/Logo-1x1.jpeg" alt="SB Logo"/> 
+                        </figure>
                         <h3 class="title is-3" style="color: #EFF0EB;">Registrasi Akun</h3>
                     </center>
                     <hr/>
