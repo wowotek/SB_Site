@@ -46,9 +46,14 @@ public class NavigationController extends HttpServlet {
         } else if (request.getParameter("audi_nav") != null){
             request.getRequestDispatcher("audition.jsp").forward(request, response);
         } else if (request.getParameter("regs_nav") != null){
-            request.getRequestDispatcher("registration.jsp").forward(request, response);
-        } else if (request.getParameter("sign_nav") != null){
-            request.getRequestDispatcher("sign.jsp").forward(request, response);
+            request.getRequestDispatcher("reg-info.jsp").forward(request, response);
+        } else if (request.getParameter("reg-info-submit") != null){
+            request.getRequestDispatcher("reg-pass.jsp").forward(request, response);
+        } else if (request.getParameter("reg-pass-submit") != null){
+            if(request.getParameter("pass-1") == null ? request.getParameter("pass-2") == null : request.getParameter("pass-1").equals(request.getParameter("pass-2"))){
+                request.getRequestDispatcher("reg-pass.jsp").forward(request, response);
+            }
+            
         }
     }
 }
