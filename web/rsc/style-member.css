@@ -20,6 +20,11 @@
     Author     : wowotek
 */
 
-.html {
-    background-color: red;
+.box {
+    background-color: #9A0606;
+}
+
+.label {
+    width: 250px;
+    color: #EFF0EB;
 }
