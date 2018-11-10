@@ -19,22 +19,7 @@
     Created on : Nov 10, 2018, 3:05:06 AM
     Author     : wowotek
 */
+
 .html {
-    color: #EFF0EB;
-}
-
-.body {
-    color: #EFF0EB;
-}
-
-#reg-box {
-    position: absolute;
-    width: 480px;
-    top: 50%;
-    left: calc(50% - 240px);
-}
-
-.box {
-    background-color: #9A0606;
-    color: #EFF0EB;
+    background-color: red;
 }

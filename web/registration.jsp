@@ -16,7 +16,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
     <body>
-        <div class="container" id="reg-box">
+        <div class="container">
             <div class="box">
                 <center>
                     <img src="rsc/Logo-16x9.jpeg" alt="SB Logo" style="height: 72px;"/> 
@@ -27,7 +27,7 @@
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
+                        <input class="input" type="text" placeholder="Aurelia Gabriele">
                     </div>
                 </div>
 
