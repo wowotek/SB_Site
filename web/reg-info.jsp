@@ -18,7 +18,7 @@
     <body>
         <div class="container coming">
             <div class="box reg-box">
-                <form action="nav" method="post" onsubmit="return validateInput()">
+                <form action="reg" method="post" onsubmit="return validateInput()">
                     <center>
                         <figure class="image">
                             <img src="rsc/Logo-fit.jpeg" alt="SB Logo" style="height: 150px; width: auto;"/> 
@@ -95,6 +95,8 @@
         </div>
     </body>
     <script type="text/javascript">
-        
+        function validateInput(){
+            return true;
+        }
     </script>
 </html>
