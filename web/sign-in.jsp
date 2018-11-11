@@ -32,22 +32,19 @@
                 <div class="field">
                     <label class="label has-text-white">Username</label>
                     <div class="control">
-                        <input type="password" class="input">
+                        <input type="password" class="input" required>
                     </div>
                 </div>
                 <div class="field">
                     <label class="label has-text-white">Password</label>
                     <div class="control">
-                        <input type="password" name="" id="" class="input">
+                        <input type="password" name="" id="" class="input" required>
                     </div>
                 </div>
                 <br>
-                <div class="columns">
-                    <div class="column">
-                        <input type="submit" value="Back" class="button is-warning is-fullwidth">
-                    </div>
-                    <div class="column">
-                        <input type="submit" value="Login" class="button is-success is-fullwidth">
+                <div class="field">
+                    <div class="control">
+                        <input type="submit" value="Login" name="sign-in-login" class="button is-success is-fullwidth is-medium">
                     </div>
                 </div>
             </form>
