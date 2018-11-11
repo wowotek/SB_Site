@@ -35,7 +35,7 @@
     </form>
     <div class="content">
         <div class="container">
-            <h1 class="title">HOME PAGE</h1>
+            <input class="button is-warning" type="button" value="Submit">
         </div>
     </div>
 </body>

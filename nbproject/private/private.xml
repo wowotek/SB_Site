@@ -5,12 +5,12 @@
         <group>
             <file>file:/home/wowotek/Documents/SB_Site/src/java/com/sb/sites/NavigationController.java</file>
             <file>file:/home/wowotek/Documents/SB_Site/web/gallery.jsp</file>
-            <file>file:/home/wowotek/Documents/SB_Site/web/registration.jsp</file>
             <file>file:/home/wowotek/Documents/SB_Site/web/index.jsp</file>
-            <file>file:/home/wowotek/Documents/SB_Site/web/style-front.css</file>
-            <file>file:/home/wowotek/Documents/SB_Site/web/style-member.css</file>
+            <file>file:/home/wowotek/Documents/SB_Site/web/rsc/style-front.css</file>
+            <file>file:/home/wowotek/Documents/SB_Site/web/reg-pass.html</file>
+            <file>file:/home/wowotek/Documents/SB_Site/web/rsc/style-member.css</file>
             <file>file:/home/wowotek/Documents/SB_Site/web/artist.jsp</file>
-            <file>file:/home/wowotek/Documents/SB_Site/web/WEB-INF/web.xml</file>
+            <file>file:/home/wowotek/Documents/SB_Site/web/reg-info.jsp</file>
             <file>file:/home/wowotek/Documents/SB_Site/web/audition.jsp</file>
         </group>
     </open-files>

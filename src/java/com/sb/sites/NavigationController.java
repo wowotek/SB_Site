@@ -50,9 +50,6 @@ public class NavigationController extends HttpServlet {
         } else if (request.getParameter("reg-info-submit") != null){
             request.getRequestDispatcher("reg-pass.jsp").forward(request, response);
         } else if (request.getParameter("reg-pass-submit") != null){
-            if(request.getParameter("pass-1") == null ? request.getParameter("pass-2") == null : request.getParameter("pass-1").equals(request.getParameter("pass-2"))){
-                request.getRequestDispatcher("reg-pass.jsp").forward(request, response);
-            }
             
         }
     }
