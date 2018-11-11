@@ -24,9 +24,8 @@
     background-color: #9A0606;
 }
 
-.label {
-    width: 250px;
-    color: #EFF0EB;
+.is-white {
+    background-color: #FFEEDF;
 }
 
 .coming {

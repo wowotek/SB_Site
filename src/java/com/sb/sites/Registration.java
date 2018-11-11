@@ -23,32 +23,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author wowotek
- */
-@WebServlet("/nav")
-public class NavigationController extends HttpServlet {
+@WebServlet("/reg")
+public class Registration extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        if (request.getParameter("home_nav") != null) {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-        } else if (request.getParameter("arts_nav") != null) {
-            request.getRequestDispatcher("artist.jsp").forward(request, response);
-        } else if (request.getParameter("gall_nav") != null) {
-            request.getRequestDispatcher("gallery.jsp").forward(request, response);
-        } else if (request.getParameter("audi_nav") != null){
-            request.getRequestDispatcher("audition.jsp").forward(request, response);
-        } else if (request.getParameter("regs_nav") != null){
-            request.getRequestDispatcher("reg-info.jsp").forward(request, response);
-        } else if (request.getParameter("sign_nav") != null){
-            request.getRequestDispatcher("sign-in.jsp").forward(request, response);
-        }
+        
     }
 }
