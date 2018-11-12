@@ -18,7 +18,7 @@
     <body>
         <div class="container coming">
             <div class="box reg-box">
-                <form action="reg" method="post" onsubmit="return validateInput()">
+                <form action="reg" method="post">
                     <center>
                         <figure class="image">
                             <img src="rsc/Logo-fit.jpeg" alt="SB Logo" style="height: 150px; width: auto;"/> 
@@ -32,7 +32,7 @@
                             <div class="field">
                                 <label class="label">Nama Depan</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Samuel" required>
+                                    <input class="input" type="text" placeholder="Samuel" required name="nama-depan">
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                             <div class="field">
                                 <label class="label">Nama Tengah (Opsional)</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Dwi">
+                                    <input class="input" type="text" placeholder="Dwi" name="nama-tengah">
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="field">
                                 <label class="label">Nama Belakang (Opsional)</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Bramantya">
+                                    <input class="input" type="text" placeholder="Bramantya" name="nama-belakang">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                     <div class="field">
                         <label class="label">Username</label>
                         <div class="control has-icons-left">
-                            <input class="input" type="text" placeholder="nama akun anda" required>
+                            <input class="input" type="text" placeholder="nama akun anda" required name="username">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
@@ -67,7 +67,7 @@
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control has-icons-left">
-                            <input class="input" type="email" placeholder="alamat email yang valid" required>
+                            <input class="input" type="email" placeholder="alamat email yang valid" required name="email">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
@@ -78,14 +78,14 @@
                         <div class="column">
                             <div class="field">
                                 <div class="control">
-                                    <input name="reg-info-submit" type="submit" class="button is-link is-medium is-fullwidth" value="Submit"/>
+                                    <input type="reset" class="button is-warning is-medium is-fullwidth" value="Reset" id=""/>
                                 </div>
                             </div>        
                         </div>
                         <div class="column">
                             <div class="field">
                                 <div class="control">
-                                    <input type="reset" class="button is-warning is-medium is-fullwidth" value="Reset" id=""/>
+                                    <input name="reg-info-submit" type="submit" class="button is-link is-medium is-fullwidth" value="Submit"/>
                                 </div>
                             </div>        
                         </div>
@@ -94,9 +94,4 @@
             </div>
         </div>
     </body>
-    <script type="text/javascript">
-        function validateInput(){
-            return true;
-        }
-    </script>
 </html>

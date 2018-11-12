@@ -46,6 +46,24 @@ function akunEditingToggle() {
 
     pass1Inp.disabled = !pass1Inp.disabled;
     pass2Inp.disabled = !pass2Inp.disabled;
+    document.getElementById("email-input").disabled = !document.getElementById("email-input").disabled
+}
+
+function validateAccountInput(form){
+    const pass1 = form.passInput1.value;
+    const pass2 = form.passInput2.value;
+    
+    if(pass1 !== pass2){
+        document.getElementById("pass1-input").className = "input is-danger";
+        document.getElementById("pass2-input").className = "input is-danger";
+        
+        return false;
+    } else {
+        document.getElementById("pass1-input").className = "input is-success";
+        document.getElementById("pass2-input").className = "input is-success";
+        
+        return true;
+    }
 }
 
 function refresh() {

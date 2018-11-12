@@ -28,17 +28,17 @@
                 <h3 class="title is-3" style="color: #EFF0EB;">Sign - In</h3>
                 <hr />
             </center>
-            <form action="reg" method="post">
+            <form action="mem" method="post">
                 <div class="field">
                     <label class="label has-text-white">Username</label>
                     <div class="control">
-                        <input type="password" class="input" required>
+                        <input type="password" class="input" required name="username">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label has-text-white">Password</label>
                     <div class="control">
-                        <input type="password" name="" id="" class="input" required>
+                        <input type="password" class="input" required name="password">
                     </div>
                 </div>
                 <br>
