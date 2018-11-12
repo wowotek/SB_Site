@@ -1,0 +1,93 @@
+<!--
+<%-- 
+    Document   : index
+    Created on : Nov 8, 2018, 10:00:18 PM
+    Author     : wowotek, fre$h, gaby, sam
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="rsc/bulma-wowo.css">
+    <link rel="stylesheet" href="rsc/style-front.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <form action="nav" method="post">
+        <nav class="navbar is-primary">
+            <div class="container">
+                <div class="navbar-brand">
+                    <input type="image" src="rsc/Logo-16x9.jpeg" style="height: 52px;">
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                        <input name="home_nav" type="submit" class="button is-primary" value="Home" style="height: 100%"/>
+                        <input name="arts_nav" type="submit" class="button is-primary" value="Artist" style="height: 100%"/>
+                        <input name="gall_nav" type="submit" class="button is-primary" value="Gallery" style="height: 100%"/>
+                        <input name="audi_nav" type="submit" class="button is-primary is-inverted" value="Audition" style="height: 100%" disabled/>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </form>
+    <div class="content">
+        <div class="columns">
+            <form action="nav" method="post" style="margin-top: 240px; margin-left: 460px;">
+                <h5 class="has-text-white">Sign in or Register if you didn't yet have an account</h5>
+                <input name="regs_nav" type="submit" class="button is-link" value="Register" style="height: 100%; margin-left: 90px"/>
+                <input name="sign_nav" type="submit" class="button is-link" value="Sign-In" style="height: 100%; margin-left: 90px;"/>
+            </form>
+        </div>            
+    </div>
+    <div class="hero-video">
+            <video playsinline autoplay muted loop style="z-index: -2;">
+                <source src="rsc/bgvideo-3.MKV">
+            </video>
+    </div>
+</body>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="footer">
+    <div class="box">
+    <div class="container">
+        <div class="content has-text-centered">
+        <p>
+            <strong>SB ENTERTAINMENT</strong><br />
+        </p>
+        </div>
+        <div class="columns">
+            <div class="column">
+            <figure class="is-24x24">
+                <img src="rsc/icon-1" alt="i1" style="width: 24px; height: 24px;"><label class="label">aboutus@sbentertaintment.com</label>
+            </figure>
+            <figure class="is-24x24">
+                <img src="rsc/icon-2" alt="i2" style="width: 24px; height: 24px;"><label class="label">Jl. Perum Sehati B35 Blotongan<br>Salatiga, Jawa Tengah<br>Indonesia</label>
+            </figure>
+            </div>
+            <div class="column">
+                <figure class="is-720x240">
+                    <img src="rsc/logo720x240-1.png" alt="yagitu" style="width: 720px; height: 240px; margin-left: 78px;">
+                </figure>
+                <h6 style="margin-left: 78px">
+                    Copyright SB Etertaintment. Allright Reserved.
+                </h6>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+</html>

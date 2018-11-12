@@ -1,3 +1,4 @@
+<!--
 <%-- 
     Document   : index
     Created on : Nov 8, 2018, 10:00:18 PM
@@ -5,6 +6,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +41,6 @@
                 <form action="nav" method="post">
                     <label class="label">Untuk masuk dalam audisi silahkan registrasi akun : </label>
                     <input name="regs_nav" type="submit" class="button is-link" value="Register" style="height: 100%"/>
-                
                     <label class="label">Atau Jika sudah Memiliki Akun silahkan masuk : </label>
                     <input name="sign_nav" type="submit" class="button is-link" value="Sign-In" style="height: 100%"/>
                 </form>
