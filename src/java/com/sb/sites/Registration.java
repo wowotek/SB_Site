@@ -35,6 +35,8 @@ public class Registration extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        if (request.getParameter("sign-in-login") != null) {
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        }
     }
 }

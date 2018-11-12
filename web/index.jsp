@@ -1,4 +1,3 @@
-<!--
 <%-- 
     Document   : index
     Created on : Nov 8, 2018, 10:00:18 PM
@@ -6,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
--->
 <!DOCTYPE html>
 <html>
 <head>
