@@ -49,6 +49,10 @@ public class NavigationController extends HttpServlet {
             request.getRequestDispatcher("reg-info.jsp").forward(request, response);
         } else if (request.getParameter("sign_nav") != null){
             request.getRequestDispatcher("sign-in.jsp").forward(request, response);
+        } else if (request.getParameter("mem-panel-index") != null){
+            request.getRequestDispatcher("member-panel.jsp").forward(request, response);
+        } else if (request.getParameter("mem-panel-refresh") != null){
+            request.getRequestDispatcher("member-panel.jsp").forward(request, response);
         }
     }
 }

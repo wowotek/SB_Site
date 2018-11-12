@@ -32,7 +32,7 @@
                 <div class="field">
                     <label class="label has-text-white">Username</label>
                     <div class="control">
-                        <input type="password" class="input" required name="username">
+                        <input type="text" class="input" required name="username">
                     </div>
                 </div>
                 <div class="field">
