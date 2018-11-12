@@ -30,12 +30,14 @@
         User user = uc.get((String)request.getSession().getAttribute("user"));
         String username = (String)request.getSession().getAttribute("user");
         request.setAttribute("user", username);
+        
+        
     %>
     <form action="nav" method="post">
         <nav class="navbar is-primary" id="top-navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <input type="image" src="rsc/Logo-16x9.jpeg" style="height: 52px; margin: 6px">
+                    <img src="rsc/Logo-16x9.jpeg" style="height: 52px; margin: 6px">
                 </div>
                 <div class="navbar-menu">
                     <div class="navbar-end">
@@ -43,7 +45,7 @@
                             Member Area
                         </a>
                         <a>&emsp;&emsp;</a>
-                        <button type="submit" class="button is-primary" style="height: 100%;" name="mem-panel-index">
+                        <button type="submit" class="button is-primary" style="height: 100%;" name="mem-panel-refresh">
                             <i class="fas fa-user"></i>
                             <label>&MediumSpace;<%= user.username%></label>
                         </button>
@@ -88,6 +90,24 @@
                                 <textarea class="textarea" placeholder="Beritahu Kami Tentang Anda !" style="z-index: 1;"><%=user.tentang%></textarea>
                             </div>
                             <input type="submit" value="Simpan" class="button is-success is-fullwidth" style="z-index: 0; margin-top: -3px">
+                        </div>
+                    </form>
+                </div>
+                <% if (user.getAdminStatus()) {%>
+                <div class="box">
+                    <form action="mem" method="post">
+                        <div class="field">
+                            <center><label class="label has-text-white" style="margin-bottom: -10px">Admin Tools</label></center>
+                            <hr/>
+                            <input type="submit" value="View User List" class="button is-danger is-fullwidth" style="z-index: 0; margin-top: -3px" name="admin-tools">
+                        </div>
+                    </form>
+                </div>
+                <% } %>
+                <div class="box">
+                    <form action="mem" method="post">
+                        <div class="field">
+                            <input type="submit" value="Logout" class="button is-danger is-fullwidth" style="z-index: 0; margin-top: -3px" name="logout">
                         </div>
                     </form>
                 </div>

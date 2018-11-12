@@ -12,6 +12,10 @@
         <servlet-name>Member</servlet-name>
         <servlet-class>com.sb.sites.Member</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserDelete</servlet-name>
+        <servlet-class>com.sb.sites.database.object.UserDelete</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NavigationController</servlet-name>
         <url-pattern>/NavigationController</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>Member</servlet-name>
         <url-pattern>/Member</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserDelete</servlet-name>
+        <url-pattern>/UserDelete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

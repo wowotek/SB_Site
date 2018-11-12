@@ -29,9 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/reg")
 public class Registration extends HttpServlet {
-    
-    private User user = new User();
-    
+    private User user;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,28 +39,27 @@ public class Registration extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        if (request.getParameter("reg-info-submit") != null) {
-            System.out.println((String)request.getParameter("username"));
-            this.user.username = request.getParameter("username");
-            this.user.email = request.getParameter("email");
-            this.user.nama_depan = request.getParameter("nama-depan");
-            this.user.nama_tengah = request.getParameter("nama-tengah");
-            this.user.nama_belakang = request.getParameter("nama-belakang");
-            request.getRequestDispatcher("reg-pass.jsp").forward(request, response);
-        } else if (request.getParameter("reg-pass-submit") != null) {
-            String pass1 = request.getParameter("pass1");
-            String pass2 = request.getParameter("pass2");
+        if (request.getParameter("reg-pass-submit") != null) {
+            
+            String pass1 = (String)request.getParameter("pass1");
+            String pass2 = (String)request.getParameter("pass2");
             
             if(pass1.equals(pass2)){
-                this.user.password = pass1;
+                this.user = new User(
+                    (String)request.getParameter("username"), 
+                    (String)request.getParameter("pass1"), 
+                    (String)request.getParameter("email"), 
+                    (String)request.getParameter("nama-depan"), 
+                    (String)request.getParameter("nama-tengah"), 
+                    (String)request.getParameter("nama-belakang"), 
+                    "", "", false);
                 Connection c = DB.getConnection();
                 UserCRUD uc = new UserCRUD(c);
-                uc.add(this.user);
+                System.out.println(uc.add(this.user));
                 request.getRequestDispatcher("sign-in.jsp").forward(request, response);
             } else {
-                request.getRequestDispatcher("reg-pass.jsp").forward(request, response);
+                request.getRequestDispatcher("reg-info.jsp").forward(request, response);
             }
-            
         }
     }
 }

@@ -75,6 +75,11 @@ public class Member extends HttpServlet {
             uc.update(this.user, (String)request.getSession().getAttribute("user"));
             this.user = uc.get((String)request.getSession().getAttribute("user"));
             request.getRequestDispatcher("member-panel.jsp").forward(request, response);
+        } else if (request.getParameter("admin-tools") != null) {
+            request.getRequestDispatcher("admin-site.jsp").forward(request, response);
+        } else if (request.getParameter("logout") != null) {
+            request.getSession().invalidate();
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
     }
 }
