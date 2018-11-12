@@ -31,7 +31,7 @@
         String username = (String)request.getSession().getAttribute("user");
         request.setAttribute("user", username);
     %>
-    <form action="mem" method="post">
+    <form action="nav" method="post">
         <nav class="navbar is-primary" id="top-navbar">
             <div class="container">
                 <div class="navbar-brand">
@@ -43,7 +43,7 @@
                             Member Area
                         </a>
                         <a>&emsp;&emsp;</a>
-                        <button type="submit" class="button is-primary" style="height: 100%;">
+                        <button type="submit" class="button is-primary" style="height: 100%;" name="mem-panel-index">
                             <i class="fas fa-user"></i>
                             <label>&MediumSpace;<%= user.username%></label>
                         </button>

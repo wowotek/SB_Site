@@ -42,6 +42,7 @@ public class Registration extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         if (request.getParameter("reg-info-submit") != null) {
+            System.out.println((String)request.getParameter("username"));
             this.user.username = request.getParameter("username");
             this.user.email = request.getParameter("email");
             this.user.nama_depan = request.getParameter("nama-depan");

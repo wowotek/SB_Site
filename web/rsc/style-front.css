@@ -22,14 +22,12 @@
 
 #top-navbar{
     position: fixed;
-    top: 56;
     width: 100%;
     z-index: 2;
 }
 
 .content {
     margin: 30px;
-    margin-top: 80px;
     z-index: 1;
 }
 #box-pst {
