@@ -17,17 +17,29 @@
 
 /* 
     Created on : Nov 10, 2018, 3:05:06 AM
-    Author     : wowotek
+    Author     : wowotek pantek
 */
 
 #top-navbar{
     position: fixed;
-    top: 0;
+    top: 56;
     width: 100%;
+    z-index: 2;
 }
 
 .content {
-    position: static;
     margin: 30px;
     margin-top: 80px;
+    z-index: 1;
+}
+#box-pst {
+    margin-left: 100px; 
+}
+
+#bgvid {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }
