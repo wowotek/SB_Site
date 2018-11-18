@@ -1,4 +1,4 @@
-
+<!--
 <%@page import="com.sb.sites.database.object.UserCRUD"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="com.sb.sites.database.DB"%>
@@ -10,16 +10,17 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+-->
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Member Panel</title>
     <link rel="stylesheet" href="rsc/bulma-wowo.css">
     <link rel="stylesheet" href="rsc/style-member.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="rsc/fontawesome/js/all.js"></script>
     <script src="rsc/member-panel-script.js"></script>
 </head>
 
@@ -47,7 +48,8 @@
                         <a>&emsp;&emsp;</a>
                         <button type="submit" class="button is-primary" style="height: 100%;" name="mem-panel-refresh">
                             <i class="fas fa-user"></i>
-                            <label>&MediumSpace;<%= user.username%></label>
+                            <label>&MediumSpace;
+                                <%= user.username%></label>
                         </button>
                     </div>
                 </div>
@@ -82,35 +84,48 @@
                     </div>
                     </form>
                 </div>
+
                 <div class="box">
                     <form action="mem" method="post">
+                        <center><label class="label has-text-white" style="margin-bottom: -10px">Member Tools</label></center>
+                        <hr>
                         <div class="field">
-                            <label class="label has-text-white">Tentang Anda</label>
                             <div class="control">
-                                <textarea class="textarea" placeholder="Beritahu Kami Tentang Anda !" style="z-index: 1;"><%=user.tentang%></textarea>
+                                <input type="submit" value="Write Home Article" class="button is-success is-fullwidth" style="z-index: 0; margin-top: -3px" name="add-home-article">
                             </div>
-                            <input type="submit" value="Simpan" class="button is-success is-fullwidth" style="z-index: 0; margin-top: -3px">
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input type="submit" value="Add Gallery Image" class="button is-success is-fullwidth" style="z-index: 0; margin-top: -3px" name="logout">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input type="submit" value="Logout" class="button is-danger is-fullwidth" style="z-index: 0; margin-top: -3px" name="logout">
+                            </div>
                         </div>
                     </form>
                 </div>
-                <% if (user.getAdminStatus()) {%>
+                <!--<% if (user.getAdminStatus()) {%>-->
                 <div class="box">
                     <form action="mem" method="post">
                         <div class="field">
                             <center><label class="label has-text-white" style="margin-bottom: -10px">Admin Tools</label></center>
-                            <hr/>
-                            <input type="submit" value="View User List" class="button is-danger is-fullwidth" style="z-index: 0; margin-top: -3px" name="admin-tools">
+                            <hr />
+                            <div class="field">
+                                <div class="control">
+                                    <input type="submit" value="View User List" class="button is-warning is-fullwidth" style="z-index: 0; margin-top: -3px" name="EditUserList">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="submit" value="View Artists" class="button is-warning is-fullwidth" style="z-index: 0; margin-top: -3px" name="EditArtists">
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
-                <% } %>
-                <div class="box">
-                    <form action="mem" method="post">
-                        <div class="field">
-                            <input type="submit" value="Logout" class="button is-danger is-fullwidth" style="z-index: 0; margin-top: -3px" name="logout">
-                        </div>
-                    </form>
-                </div>
+                <!--<% } %>-->
             </div>
             <div class="column">
                 <div class="box">
@@ -226,6 +241,17 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="box">
+                    <form action="mem" method="post">
+                        <div class="field">
+                            <label class="label has-text-white">Tentang Anda</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Beritahu Kami Tentang Anda !" style="z-index: 1;"><%=user.tentang%></textarea>
+                            </div>
+                            <input type="submit" value="Simpan" class="button is-success is-fullwidth" style="z-index: 0; margin-top: -3px">
                         </div>
                     </form>
                 </div>

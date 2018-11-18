@@ -13,7 +13,7 @@
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="rsc/bulma-wowo.css">
     <link rel="stylesheet" href="rsc/style-member.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="rsc/fontawesome/js/all.js"></script>
     <script src="rsc/member-panel-script.js"></script>
 </head>
 
