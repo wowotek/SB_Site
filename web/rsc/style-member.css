@@ -29,7 +29,7 @@
 }
 
 .coming {
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-name: come;
 }
 
@@ -41,4 +41,24 @@
     to {
         opacity: 1;
     }
+}
+
+#update-warning {
+    z-index: 100;
+    position: fixed;
+    width: 550px;
+    height: 350px;
+    
+    top: calc(50% - 175px);
+    left: calc(50% - 275px);
+}
+
+.message.is-warning.showed {
+    display: anything;
+    opacity: 1;
+}
+
+.message.is-warning.hidden {
+    display: none;
+    opacity: 0;
 }

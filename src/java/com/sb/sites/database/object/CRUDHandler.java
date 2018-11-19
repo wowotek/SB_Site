@@ -18,6 +18,7 @@ package com.sb.sites.database.object;
 // TO for Target Object
 
 import java.util.ArrayList;
+import javax.servlet.http.Part;
 
 public interface CRUDHandler<TO> {
     

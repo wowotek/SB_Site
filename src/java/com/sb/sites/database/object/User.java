@@ -27,10 +27,21 @@ public class User {
     public String nama_tengah;
     public String nama_belakang;
     public String tentang;
-    public String photo;
-    private boolean isAdmin;
+    public byte photo[];
+    private int isAdmin;
 
-    public User(String username, String password, String email, String nama_depan, String nama_tengah, String nama_belakang, String tentang, String photo, boolean isAdmin) {
+    public User(String username, String password, String email, String nama_depan, String nama_tengah, String nama_belakang, String tentang, int isAdmin) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.nama_depan = nama_depan;
+        this.nama_tengah = nama_tengah;
+        this.nama_belakang = nama_belakang;
+        this.tentang = tentang;
+        this.isAdmin = isAdmin;
+    }
+    
+    public User(String username, String password, String email, String nama_depan, String nama_tengah, String nama_belakang, String tentang, byte[] photo, int isAdmin) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -47,6 +58,6 @@ public class User {
     }
     
     public boolean getAdminStatus(){
-        return this.isAdmin;
+        return isAdmin == 1;
     }
 }

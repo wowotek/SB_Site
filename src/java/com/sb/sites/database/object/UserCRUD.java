@@ -1,7 +1,10 @@
 package com.sb.sites.database.object;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.sql.*;
+import javax.servlet.http.Part;
 
 public class UserCRUD implements CRUDHandler<User> {
     private final Connection c;
@@ -37,10 +40,10 @@ public class UserCRUD implements CRUDHandler<User> {
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getString(8),
-                        rs.getBoolean(9)
+                        rs.getInt(9)
                 ));
             }
+            
             return users;
         } catch (SQLException ex){
             System.err.println(ex.getMessage());
@@ -59,8 +62,7 @@ public class UserCRUD implements CRUDHandler<User> {
                         + "nama_tengah, "
                         + "nama_belakang, "
                         + "tentang, "
-                        + "photo, "
-                        + "isAdmin) values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        + "isAdmin) values (?, ?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, to.username);
             ps.setString(2, to.password);
             ps.setString(3, to.email);
@@ -68,8 +70,11 @@ public class UserCRUD implements CRUDHandler<User> {
             ps.setString(5, to.nama_tengah);
             ps.setString(6, to.nama_belakang);
             ps.setString(7, to.tentang);
-            ps.setString(8, to.photo);
-            ps.setBoolean(9, to.getAdminStatus());
+            if(to.getAdminStatus()){
+                ps.setInt(8, 1);
+            } else {
+                ps.setInt(8, 0);
+            }
             
             ps.execute();
             return true;
@@ -83,7 +88,7 @@ public class UserCRUD implements CRUDHandler<User> {
     public boolean update(User newObject, String PrimaryKey) {
         try{
             PreparedStatement ps = this.c.prepareStatement
-                ("update user set password=?, email=?, nama_depan=?, nama_tengah=?, nama_belakang=?, tentang=?, photo=? where username=?");
+                ("update `user` set `password`=?, `email`=?, `nama_depan`=?, `nama_tengah`=?, `nama_belakang`=?, `tentang`=? where `username`=?");
             
             ps.setString(1, newObject.password);
             ps.setString(2, newObject.email);
@@ -91,11 +96,9 @@ public class UserCRUD implements CRUDHandler<User> {
             ps.setString(4, newObject.nama_tengah);
             ps.setString(5, newObject.nama_belakang);
             ps.setString(6, newObject.tentang);
-            ps.setString(7, newObject.photo);
-            ps.setString(8, newObject.username);
+            ps.setString(7, newObject.username);
             
-            ps.execute();
-            return true;
+            return ps.execute();
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
             return false;
@@ -109,12 +112,24 @@ public class UserCRUD implements CRUDHandler<User> {
                 ("delete from user where username=?");
             ps.setString(1, PrimaryKey);
             
-            ps.execute();
-            return true;
+            return ps.execute();
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
             return false;
         }
     }
-    
+
+    public boolean uploadImage(String PrimaryKey, String PhotoPath) {
+        try{
+            PreparedStatement ps = this.c.prepareStatement
+                ("update user set photo=? where username=?");
+            
+            ps.setString(1, PhotoPath);
+            ps.setString(2, PrimaryKey);
+            return ps.execute();
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+            return false;
+        }
+    }
 }

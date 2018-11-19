@@ -28,7 +28,7 @@
                 <h3 class="title is-3" style="color: #EFF0EB;">Sign - In</h3>
                 <hr />
             </center>
-            <form action="mem" method="post">
+            <form action="Login" method="post">
                 <div class="field">
                     <label class="label has-text-white">Username</label>
                     <div class="control">

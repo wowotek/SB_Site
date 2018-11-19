@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>NavigationController</servlet-name>
-        <servlet-class>com.sb.sites.NavigationController</servlet-class>
+        <servlet-name>Frontsite</servlet-name>
+        <servlet-class>com.sb.sites.Frontsite</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Registration</servlet-name>
-        <servlet-class>com.sb.sites.Registration</servlet-class>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.sb.sites.Login</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Member</servlet-name>
-        <servlet-class>com.sb.sites.Member</servlet-class>
+        <servlet-name>Membersite</servlet-name>
+        <servlet-class>com.sb.sites.Membersite</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UserDelete</servlet-name>
-        <servlet-class>com.sb.sites.database.object.UserDelete</servlet-class>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>com.sb.sites.AdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.sb.sites.Register</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NavigationController</servlet-name>
-        <url-pattern>/NavigationController</url-pattern>
+        <servlet-name>Frontsite</servlet-name>
+        <url-pattern>/Frontsite</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Registration</servlet-name>
-        <url-pattern>/Registration</url-pattern>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Member</servlet-name>
-        <url-pattern>/Member</url-pattern>
+        <servlet-name>Membersite</servlet-name>
+        <url-pattern>/Membersite</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UserDelete</servlet-name>
-        <url-pattern>/UserDelete</url-pattern>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

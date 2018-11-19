@@ -23,8 +23,8 @@ public class DB {
     private DB() {
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sb", "root", "");
-            System.out.println("Database Connection Success");
+            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sb_sites", "root", "");
+            System.out.println("--[Database Connection Success]--");
         } catch(SQLException | ClassNotFoundException ex){
             System.err.println(ex.getMessage());
         }
